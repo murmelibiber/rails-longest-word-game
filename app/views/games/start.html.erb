@@ -1,0 +1,12 @@
+<h1>We give you some random words here:</h1>
+
+<p> here are the random letters: <%= @random_word%> </p>
+
+<form action="/second_step">
+  <label for="question">What is your best guess?</label>
+  <input type="text" name="guess" placeholder="give me something">
+  <!-- the following two hidden things is just to pass the time variable-->
+  <input type="hidden" name="start_time" value="<%=Time.now%>">
+  <input type="hidden" name="grid" value="<%=@random_word%>">
+  <input type="submit" value="GoOOOO!">
+</form>
